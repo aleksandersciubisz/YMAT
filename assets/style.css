@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,700&family=Parisienne&display=swap');
+
+/*################################# CSS VARIABLES  #################################*/
+:root {
+  /* Colors */
+
+  --white: #fff;
+  --black: #000;
+  --burgundy: #b70713;
+  --orange: #f89835;
+
+  --white-alt: #f0f0f0;
+  --black-alt: #0f0f0f;
+
+  --h1-size: clamp(2.617rem, 1.907rem + 3.5498vw, 5.235rem);
+  --h2-size: clamp(1.618rem, 1.1792rem + 2.1939vw, 3.236rem);
+
+  --normal-font: clamp(1rem, 0.7288rem + 1.3559vw, 2rem);
+  --small-font: clamp(0.8rem, 0.6818rem + 0.5912vw, 1.236rem);
+}
+
+/*################################# HTML LAYOUT  #################################*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  background-color: var(--white-alt);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black-alt);
+  transition: transform 0.5s;
+}
+
+a:hover {
+  color: var(--orange);
+  transform: scale(1.2);
+}
+
+/*################################# TYPOGRAPHY  #################################*/
+h1 {
+  font-family: 'Parisienne', cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--h1-size);
+}
+
+h2,
+h3,
+header {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--h2-size);
+}
+
+h3 {
+  font-size: var(--normal-font);
+}
+
+p {
+  font-size: var(--normal-font);
+  width: 100%;
+  margin: 5px 0px;
+  padding: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  text-shadow: -1px -2px 3px rgba(255, 255, 255, 0.8);
+}
+
+/*################################# Navbar #################################*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+
+  background-color: rgba(255, 255, 255, 0.5);
+
+  width: 100%;
+  padding: 0.8rem 3rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 600px;
+  min-width: 320px;
+}
+
+/*################################# Home #################################*/
+#home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: white no-repeat center center/cover;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.video-container video {
+  min-height: 100%;
+  min-width: 100%;
+  max-width: 99vw;
+  object-fit: cover;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding-bottom: 10vh;
+}
+
+#home h1 {
+  border-bottom: solid 2px var(--black);
+}
+
+.secondary {
+  margin-top: 1rem;
+}
+
+#home a {
+  text-decoration: none;
+  color: var(--black-alt);
+  transition: transform 0.5s;
+}
+
+#home a:hover {
+  color: var(--orange);
+  transform: scale(1.1);
+}
+
+/*################################# How & Contact #################################*/
+#how,
+#contact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 3rem 2rem;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
+#how > div,
+#contact > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-self: stretch;
+
+  height: auto;
+  min-height: 30vh;
+  padding: 10px;
+
+  background-size: cover;
+  background-attachment: fixed;
+
+  border: solid 2px var(--black);
+}
+
+/*################################# How #################################*/
+
+#how p {
+  text-align: left;
+}
+
+#how > div:nth-of-type(1) {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+#how > div:nth-of-type(4) {
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
+
+#how > div:nth-of-type(14) {
+  grid-column: 1/4;
+  grid-row: 6/7;
+}
+
+#how > div:nth-of-type(15) {
+  grid-column: 1/2;
+  grid-row: 7/9;
+}
+
+#how > div:nth-of-type(16) {
+  grid-column: 2/4;
+  grid-row: 7/9;
+}
+
+#how > div:nth-of-type(17) {
+  grid-column: 1/4;
+  grid-row: 9/10;
+}
+
+#how span {
+  color: var(--orange);
+}
+
+/*################################# Contact #################################*/
+
+#contact p {
+  text-align: left;
+}
+
+#contact > div:nth-of-type(2) {
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+
+#contact > div:nth-of-type(4) {
+  grid-column: 2/4;
+  grid-row: 2/4;
+}
+
+#contact > div:nth-of-type(6) {
+  grid-column: 1/4;
+  grid-row: 4/5;
+  border: none;
+  padding: 0;
+  min-height: auto;
+}
+
+#contact span {
+  color: var(--orange);
+}
+
+/* Contact Form */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback-input {
+  color: var(--black-alt);
+  border: 2px solid var(--black-alt);
+
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 70%;
+  outline: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+}
+
+.feedback-input:focus {
+  border: 2px solid var(--orange);
+}
+
+textarea {
+  height: 90px;
+  line-height: 125%;
+  resize: vertical;
+}
+
+[type='submit'] {
+  width: 70%;
+  background: var(--white);
+  border: 2px solid var(--black-alt);
+  cursor: pointer;
+  color: var(--black-alt);
+  padding: 10px 0;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+}
+
+[type='submit']:hover {
+  color: var(--burgundy);
+  border: 2px solid var(--burgundy);
+}
+
+/* Backgrounds */
+.surf {
+  background: url('/assets/surf.jpg');
+}
+
+.sunset {
+  background: url('/assets/sunset.jpg');
+}
