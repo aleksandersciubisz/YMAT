@@ -403,7 +403,51 @@ textarea {
   border: 2px solid var(--burgundy);
 }
 
-/* Cookies */
+/*################################# After Contact #################################*/
+
+#after-contact {
+  width: 100vw;
+  height: 100vh;
+
+  background-size: cover;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#after-contact div {
+  width: auto;
+  height: auto;
+  min-width: 30%;
+  max-width: 40%;
+  min-height: 30%;
+  background-color: var(--white-alt);
+  border: 2px solid var(--black-alt);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+#after-contact i {
+  font-size: var(--h2-size);
+}
+
+.after-btn {
+  margin: 0;
+  font-size: var(--small-font);
+  border: 2px solid var(--black-alt);
+  padding: 1rem;
+}
+
+.after-btn:hover {
+  border: 2px solid var(--orange);
+}
+
 /* Cookies consent banner */
 .cookies {
   position: fixed;
